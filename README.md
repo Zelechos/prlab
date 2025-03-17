@@ -13,7 +13,6 @@ To Up frontend see the next video : [React + Typescript + Electron ](https://www
 npm install
 
 ```
-
 Execute with React : 
 
 ```
@@ -27,8 +26,7 @@ to configure electron see the next link
 npm run dev:electron
 
 ```
-
-> WARNING !!! the election app not show nothing if not execute before the react app!!
+> WARNING !!! the Electron app not show nothing if not execute before the react app!!
 
 ***In version v0.1.0 we optimized this with the command***:
 
@@ -36,7 +34,6 @@ npm run dev:electron
 npm run dev
 
 ```
-
 For the ***"npm run dev"*** command to work and run both applications in parallel, the ***"npm-run-all"*** dependency must be installed first with the following command:
 
 ```
