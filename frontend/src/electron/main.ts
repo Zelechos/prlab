@@ -4,8 +4,8 @@ import { isDev } from './utils.js';
 
 const createWindow = () => {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600
+    width: 1200,
+    height: 750
   })
 
   if (isDev()) {
