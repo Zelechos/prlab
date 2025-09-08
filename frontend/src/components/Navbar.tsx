@@ -2,7 +2,6 @@ const NavBar = () => {
 
   return (
     <>
-      <p>Hello Vertical Navbar</p>
     </>
   )
 }
