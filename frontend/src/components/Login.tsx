@@ -1,10 +1,10 @@
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
+import PlatformButton from "./PlatformButton.tsx";
 
 const Login = () => {
   return (
-    <Card className="max-w-sm">
-      <form className="flex flex-col gap-4">
-
+    <Card className="w-full w-[500px]">
+      <form className="flex flex-col gap-2">
         <div>
           <div className="mb-2 block">
             <Label htmlFor="email1">Your email</Label>
@@ -21,7 +21,10 @@ const Login = () => {
           <Checkbox id="remember" />
           <Label htmlFor="remember">Remember me</Label>
         </div>
-        <Button type="submit">Submit</Button>
+        <Button className="mx-auto w-64" type="submit" color="blue">Submit</Button>
+        <PlatformButton platform="github"/>
+        <PlatformButton platform="gitlab"/>
+        <PlatformButton platform="bitbucket"/>
       </form>
     </Card>
   );
