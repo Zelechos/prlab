@@ -1,5 +1,7 @@
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 import PlatformButton from "./PlatformButton.tsx";
+import { HiMail, PiPasswordFill } from "../assets/icons.tsx";
+
 
 const Login = () => {
   return (
@@ -7,24 +9,25 @@ const Login = () => {
       <form className="flex flex-col gap-2">
         <div>
           <div className="mb-2 block">
-            <Label htmlFor="email1">Your email</Label>
+            <Label htmlFor="email4">Your email</Label>
           </div>
-          <TextInput id="email1" type="email" placeholder="name@flowbite.com" required />
+          <TextInput id="email4" type="email" icon={HiMail} placeholder="name@flowbite.com" required />
         </div>
         <div>
           <div className="mb-2 block">
             <Label htmlFor="password1">Your password</Label>
           </div>
-          <TextInput id="password1" type="password" required />
+          <TextInput id="password1" icon={PiPasswordFill} placeholder="password" type="password" required />
         </div>
         <div className="flex items-center gap-2">
           <Checkbox id="remember" />
           <Label htmlFor="remember">Remember me</Label>
         </div>
-        <Button className="mx-auto w-64" type="submit" color="blue">Submit</Button>
-        <PlatformButton platform="github"/>
-        <PlatformButton platform="gitlab"/>
-        <PlatformButton platform="bitbucket"/>
+        <Button className="mx-auto w-64" size="xs" type="submit" color="blue">Submit</Button>
+        <PlatformButton platform="github" />
+        <PlatformButton platform="gitlab" />
+        <PlatformButton platform="bitbucket" />
+        <PlatformButton platform="google" />
       </form>
     </Card>
   );
