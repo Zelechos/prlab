@@ -7,24 +7,23 @@ interface PlatformButtonProps {
 }
 
 const PLATFORMS = {
-  github: { color: "gray", icon: <FaGithub className="mr-2 h-5 w-5" />, label: "Github" },
-  gitlab: { color: "yellow", icon: <FaGitlab className="mr-2 h-5 w-5" />, label: "GitLab" },
-  bitbucket: { color: "blue", icon: <DiBitbucket className="mr-2 h-5 w-5" />, label: "BitBucket" },
-  google: { color: "green", icon: <FaGoogle className="mr-2 h-5 w-5" />, label: "Google" },
+  google: { color: "green", icon: <FaGoogle className="h-7 w-7" />, label: "Google" },
+  github: { color: "gray", icon: <FaGithub className="h-7 w-7" />, label: "Github" },
+  gitlab: { color: "yellow", icon: <FaGitlab className="h-7 w-7" />, label: "GitLab" },
+  bitbucket: { color: "blue", icon: <DiBitbucket className="h-7 w-7" />, label: "BitBucket" },
 };
 
 
 const PlatformButtom = ({ platform }: PlatformButtonProps) => {
-  const prop = PLATFORMS[platform.toLowerCase()];
+  let currentPlatform = platform.toLowerCase() as keyof typeof PLATFORMS;
+  const prop = PLATFORMS[currentPlatform];
   if (!prop) return null;
 
   return (
     <>
-      <Button className="mx-auto w-64" color={prop.color} size="xs" outline>
+      <Button className="" color={prop.color}  outline>
         {prop.icon}
-        {prop.label}
       </Button>
-
     </>
   )
 }
